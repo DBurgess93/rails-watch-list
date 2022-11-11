@@ -1,0 +1,10 @@
+<div class="container-md">
+  <h1>New List</h1>
+
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.submit %>
+  <% end %>
+
+  <%= link_to "Back to home", lists_path %>
+</div>

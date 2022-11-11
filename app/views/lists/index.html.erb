@@ -1,0 +1,11 @@
+<div class="container-md">
+<h1>Lists</h1>
+  <%= link_to "Make a new list", new_list_path %>
+
+<div class="d-flex align-items-center justify-content-center">
+  <ul class="list-group list-group-flush">
+    <% @list.each do |list| %>
+    <li class="list-group-item btn btn-outline-success"><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+  </ul>
+</div>

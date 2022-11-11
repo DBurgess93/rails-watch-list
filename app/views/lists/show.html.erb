@@ -1,0 +1,16 @@
+<div class="container-md">
+  <h1> <%= @list.name %> </h1>
+  <div class="d-flex align-items-center justify-content-center">
+    <ul class="list-group list-group-flush">
+      <% @list.bookmarks.each do |bookmark| %>
+      <li class="list-group-item btn btn-outline-success">
+        <%= bookmark.movie.title %>
+        <p><%= bookmark.movie.overview %></p>
+        <p><%= bookmark.movie.rating %></p>
+        <p><%= link_to "Delete Bookmark", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+      </li>
+      <% end %>
+    </ul>
+</div>
+    <%= link_to "Add Bookmark", new_list_bookmark_path(@list.id)  %>
+    <%= link_to "Back to home", lists_path %>
