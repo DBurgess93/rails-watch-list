@@ -1,2 +1,41 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.container {
+  width: 1100px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-link, .secondary-link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: rgb(66, 62, 62);
+  }
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.btn-link {
+  font-size: 34px;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+.secondary-link{
+  padding: 5px;
+}
+
+// .list-card{
+//   background-image: ;
+// }

@@ -1,6 +1,7 @@
 class List < ApplicationRecord
   has_many :bookmarks
   has_many :movies, through: :bookmarks, dependent: :destroy
+  has_one_attached :photo
 # has many through is reliant on the 'has many bookmarks' above it.
 # without this it would not be able to go thorugh bookmarks
 
